@@ -1,4 +1,5 @@
 #Tell Travis that we need super user permissions
+language: node_js
 sudo: required
 services:
 #Tell Travis that we need docker
