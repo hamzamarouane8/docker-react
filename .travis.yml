@@ -1,11 +1,13 @@
+#Tell Travis that we need super user permissions
 sudo: required
-services: 
-    - docker
+services:
+#Tell Travis that we need docker
+  - docker
 
+#Tell Travis that before executing the script, create the docker image from the DevDockerfile.
 before_install:
-    - docker build -t hmarouane/docker-react -f Dockerfile.dev .
+  - docker build -t akhil/docker-react-aws -f Dockerfile.dev .
 
+#Tell Travis to execute tests (-- -- Coverage will exit npm run test and print out the code coverage)
 script:
-    - docker run hmarouane/docker-react npm run test -- --coverage 
-
-
+  - docker run akhil/docker-react-aws npm run test -- --coverage
