@@ -9,5 +9,3 @@ before_install:
   - docker build -t akhil/docker-react-aws -f Dockerfile.dev .
 
 #Tell Travis to execute tests (-- -- Coverage will exit npm run test and print out the code coverage)
-script:
-  - docker run akhil/docker-react-aws npm run test -- --coverage
