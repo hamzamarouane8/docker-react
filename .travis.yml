@@ -6,4 +6,4 @@ before_install:
     - docker build -t hmarouane/docker-react -f Dockerfile.dev .
 
 script:
-    - docker run hmarouane/docker-react npm run test -- --coverage
+    - docker run hmarouane/docker-react npm run test -- --coverage 
