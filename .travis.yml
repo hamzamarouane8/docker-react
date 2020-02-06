@@ -1,5 +1,7 @@
 #Tell Travis that we need super user permissions
 language: node_js
+node_js: node
+cache: npm
 
 sudo: required
 services:
